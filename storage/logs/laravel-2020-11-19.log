@@ -1,0 +1,270 @@
+[2020-11-19 11:26:29] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 11:26:30] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 11:54:44] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 11:54:44] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 11:55:51] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 11:55:51] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 12:05:23] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 12:05:23] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 12:09:27] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 12:09:27] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 12:11:07] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 12:11:07] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 12:22:51] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 12:22:51] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 12:23:04] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 12:23:04] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
+[2020-11-19 12:26:01] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(152): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#6 D:\\pepedi\\vendor\\fideloper\\proxy\\src\\TrustProxies.php(57): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#7 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(163): Fideloper\\Proxy\\TrustProxies->handle(Object(Illuminate\\Http\\Request), Object(Closure))
+#8 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Pipeline.php(53): Illuminate\\Pipeline\\Pipeline->Illuminate\\Pipeline\\{closure}(Object(Illuminate\\Http\\Request))
+#9 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Pipeline\\Pipeline.php(104): Illuminate\\Routing\\Pipeline->Illuminate\\Routing\\{closure}(Object(Illuminate\\Http\\Request))
+#10 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(151): Illuminate\\Pipeline\\Pipeline->then(Object(Closure))
+#11 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(116): Illuminate\\Foundation\\Http\\Kernel->sendRequestThroughRouter(Object(Illuminate\\Http\\Request))
+#12 D:\\pepedi\\public\\index.php(55): Illuminate\\Foundation\\Http\\Kernel->handle(Object(Illuminate\\Http\\Request))
+#13 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#14 {main}
+"} 
+[2020-11-19 12:26:01] local.ERROR: Class Fruitcake\Cors\HandleCors does not exist {"exception":"[object] (ReflectionException(code: -1): Class Fruitcake\\Cors\\HandleCors does not exist at D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php:788)
+[stacktrace]
+#0 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(788): ReflectionClass->__construct('Fruitcake\\\\Cors\\\\...')
+#1 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(667): Illuminate\\Container\\Container->build('Fruitcake\\\\Cors\\\\...')
+#2 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(615): Illuminate\\Container\\Container->resolve('Fruitcake\\\\Cors\\\\...', Array)
+#3 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(767): Illuminate\\Container\\Container->make('Fruitcake\\\\Cors\\\\...', Array)
+#4 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(215): Illuminate\\Foundation\\Application->make('Fruitcake\\\\Cors\\\\...')
+#5 D:\\pepedi\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Http\\Kernel.php(189): Illuminate\\Foundation\\Http\\Kernel->terminateMiddleware(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#6 D:\\pepedi\\public\\index.php(60): Illuminate\\Foundation\\Http\\Kernel->terminate(Object(Illuminate\\Http\\Request), Object(Illuminate\\Http\\Response))
+#7 D:\\pepedi\\server.php(21): require_once('D:\\\\pepedi\\\\publi...')
+#8 {main}
+"} 
