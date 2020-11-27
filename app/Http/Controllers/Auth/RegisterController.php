@@ -38,7 +38,6 @@ class RegisterController extends Controller
                 'alamat' => ['required'],
                 'name' => ['required', 'string', 'max:20'],
                 'email' => ['required', 'string', 'email', 'max:20'],
-                'pekerjaan' => ['required', 'string', 'max:20'],
             ],
             [
                 'name.string' => 'Nama Lengkap Harus berupa huruf',
@@ -49,8 +48,6 @@ class RegisterController extends Controller
                 'email.required' => 'Data tidak boleh kosong, harap diisi',
                 'password.required' => 'Data tidak boleh kosong, harap diisi',
                 'role.required' => 'Data tidak boleh kosong, harap diisi',
-                'pekerjaan.required' => 'Data tidak boleh kosong, harap diisi',
-                'jenisKelamin.required' => 'Data tidak boleh kosong, harap diisi',
                 'password.min' => 'Minimal 8 karakter',
                 'password.confirmed' => 'Masukkan konfirmasi password yang valid',
                 'email.email' => 'Masukkan Email yang valid.',
@@ -69,8 +66,6 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $data['name'],
             'username' => $data['username'],
-            'pekerjaan' => $data['pekerjaan'],
-            'jenisKelamin' => $data['jenisKelamin'],
             'noHp' => $data['noHp'],
             'alamat' => $data['alamat'],
             'email' => $data['email'],

@@ -77,7 +77,6 @@ class UserController extends Controller
                 'alamat' => ['required'],
                 'name' => ['required', 'string', 'max:20'],
                 'email' => ['required', 'string', 'email', 'max:20'],
-                'pekerjaan' => ['required', 'string', 'max:20'],
             ],
             [
                 'name.string' => 'Nama Lengkap Harus berupa huruf',
@@ -86,7 +85,6 @@ class UserController extends Controller
                 'noHp.required' => 'Data tidak boleh kosong, harap diisi',
                 'alamat.required' => 'Data tidak boleh kosong, harap diisi',
                 'email.required' => 'Data tidak boleh kosong, harap diisi',
-                'pekerjaan.required' => 'Data tidak boleh kosong, harap diisi',
                 'email.email' => 'Masukkan Email yang valid.',
                 'username.max' => 'Maksimal 20 karakter',
                 'username.alpha_num' => 'Hanya bisa diisi dengan karakter alpha numeric',

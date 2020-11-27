@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Kecamatan extends Model
 {
-    protected $table = 'kecamatan';
+    protected $table = 'konsultan';
 
-    protected $fillable = ['nama_kecamatan'];
+    protected $fillable = ['nama_konsultan'];
 
     public function users()
     {
-        return $this->hasMany(User::class, 'kecamatan_id');
+        return $this->hasMany(User::class, 'konsultan_id');
     }
 }
