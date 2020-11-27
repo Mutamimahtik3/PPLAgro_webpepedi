@@ -149,15 +149,6 @@ gtag('config', 'UA-94034622-3');
                                         </div>
                                     </div>
                                     <div class="form-group col-12">
-                                        <label for="pekerjaan">Pekerjaan</label>
-                                        <input id="pekerjaan" type="pekerjaan" class="form-control" name="pekerjaan" value="{{ old('pekerjaan') }}" required>
-                                        @error('pekerjaan')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-12">
                                         <label for="alamat">Alamat</label>
                                         <input id="alamat" type="alamat" class="form-control" name="alamat" value="{{ old('alamat') }}" required>
                                         @error('alamat')
