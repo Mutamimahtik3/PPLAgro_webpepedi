@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('admin')->middleware('auth')->group(function () {
     Route::get('/', 'AdminController@index')->name('admin.index');
     Route::resource('artikel', 'ArtikelController');
-    Route::resource('kecamatan', 'KecamatanController');
+    Route::resource('konsultan', 'KonsultanController');
     Route::delete('artikel/{artikel:slug}', 'ArtikelController@destroy')->name('artikel.destroy.admin');
     Route::get('artikel/{artikel:slug}', 'ArtikelController@edit')->name('artikel.edit.admin');
     Route::patch('artikel/{artikel:slug}', 'ArtikelController@update')->name('artikel.update.admin');
