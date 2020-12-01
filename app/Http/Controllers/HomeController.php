@@ -2,27 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    public function index(Request $request)
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
     {
-        if ($request->user()->hasRole('Admin')) {
-            return redirect('admin');
+        if (Auth::user()->role == 'admin') {
+            return redirect('/admin');
+        }else if(Auth::user()->role == 'konsultan'){
+            return redirect('/konsultan');
         }
-
-        if ($request->user()->hasRole('Petani')) {
-            return redirect('petani');
-        }
-
-        if ($request->user()->hasRole('Konsultan')) {
-            return redirect('konsultan');
-        }
+        return view('home');
+    }
+    public function indexAdmin()
+    {
+        return view('home');
+    }
+    public function indexKonsultan()
+    {
+        return view('home');
     }
 }

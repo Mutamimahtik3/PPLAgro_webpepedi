@@ -1,11 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
-use App\Http\Controllers\Controller;
-use App\Providers\RouteServiceProvider;
-use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
 {
@@ -20,14 +18,16 @@ class LoginController extends Controller
     |
     */
 
-    use AuthenticatesUsers;
+    use AuthenticatesUsers {
+        logout as performLogout;
+    }
 
     /**
      * Where to redirect users after login.
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -38,21 +38,9 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
-
-    public function username()
+    public function logout(Request $request)
     {
-        return 'username';
-    }
-
-    protected function validateLogin(Request $request)
-    {
-        $this->validate($request, [
-            'username' => 'required|alpha_num|max:20',
-            'password' => 'required|string',
-        ], [
-            'username.required' => 'Data Tidak Boleh kosong',
-            'username.max' => 'Maksimal 20 karakter',
-            'password.required' => 'Data Tidak Boleh kosong',
-        ]);
+        $this->performLogout($request);
+        return redirect('login');
     }
 }
