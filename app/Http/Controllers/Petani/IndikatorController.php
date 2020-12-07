@@ -95,4 +95,98 @@ class IndikatorController extends Controller
         $data = PascaTanam::whereId($id)->firstOrFail();
         return view('petani.pascatanam.show', compact('data'));
     }
+    //====route to edit page=========/
+    public function editPascaTanam($id)
+    {
+        $data = PascaTanam::whereId($id)->firstOrFail();
+        return view('petani.pascatanam.edit', compact('data'));
+
+    }
+    public function editTanam($id)
+    {
+        $data = Tanam::whereId($id)->firstOrFail();
+        return view('petani.tanam.edit', compact('data'));
+
+    }
+    public function editPratanam($id)
+    {
+        $data = Pratanam::whereId($id)->firstOrFail();
+        return view('petani.pratanam.edit', compact('data'));
+
+    }
+
+    //========update========//
+    public function updatePascaTanam($id, Request $request)
+    {
+        $request->validate([
+            'jenis_padi' => 'required|string|max:255',
+            'varietas' => 'required|string|max:255',
+            'tgl_panen' => 'required',
+            'kondisi_gabah' => 'required',            
+        ]);
+        $x = PascaTanam::find($id);
+        $y = $x->padi->id;
+        $x->update([
+            'tgl_panen' => $request->tgl_panen,
+            'kondisi_gabah' => $request->kondisi_gabah,
+        ]);
+        Padi::whereId($y)
+        ->update([
+            'jenis_padi' => $request->jenis_padi, 
+            'varietas' => $request->varietas, 
+        ]);
+        return redirect()->route('p.i.ps.show', ['id' => $id]);
+    }
+    public function updatePraTanam($id, Request $request)
+    {
+        $request->validate([
+            'jenis_padi' => 'required|string|max:255',
+            'varietas' => 'required|string|max:255',
+            'tgl_persemaian' => 'required',
+            'banyak_benih' => 'required',            
+            'jenis_tanah' => 'required',            
+        ]);
+        $x = Pratanam::find($id);
+        $y = $x->padi->id;
+        $x->update([
+            'tgl_persemaian' => $request->tgl_persemaian,
+            'banyak_benih' => $request->banyak_benih,
+            'jenis_tanah' => $request->jenis_tanah,
+        ]);
+        Padi::whereId($y)
+        ->update([
+            'jenis_padi' => $request->jenis_padi, 
+            'varietas' => $request->varietas, 
+        ]);
+        return redirect()->route('p.i.pra.show', ['id' => $id]);
+    }
+    public function updateTanam($id, Request $request)
+    {
+        $request->validate([
+            'jenis_padi' => 'required|string|max:255',
+            'varietas' => 'required|string|max:255',
+            'lokasi' => 'required',
+            'luas_lahan' => 'required',
+            'jenis_tanah' => 'required',
+            'jenis_pupuk' => 'required',
+            'ph_tanah' => 'required',
+            'kondisi_tanaman' => 'required',     
+        ]);
+        $x = Tanam::find($id);
+        $y = $x->padi->id;
+        $x->update([
+            'lokasi' => $request->lokasi,
+            'luas_lahan' => $request->luas_lahan,
+            'jenis_tanah' => $request->jenis_tanah,
+            'jenis_pupuk' => $request->jenis_pupuk ,
+            'ph_tanah' => $request->ph_tanah ,
+            'kondisi_tanaman' => $request->kondisi_tanaman ,
+        ]);
+        Padi::whereId($y)
+        ->update([
+            'jenis_padi' => $request->jenis_padi, 
+            'varietas' => $request->varietas, 
+        ]);
+        return redirect()->route('p.i.in.show', ['id' => $id]);
+    }
 }

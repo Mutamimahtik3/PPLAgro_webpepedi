@@ -41,4 +41,12 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Padi');
     }
+    public function sender()
+    {
+        return $this->hasMany('App\Chat','sender_id');
+    }
+    public function reciever()
+    {
+        return $this->hasMany('App\Chat','reciever_id');
+    }
 }
