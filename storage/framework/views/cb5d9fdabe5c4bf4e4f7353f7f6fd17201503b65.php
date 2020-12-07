@@ -8,8 +8,10 @@
         <div class="row">
             <?php if(Auth::user()->role == 'petani'): ?>
             <?php echo $__env->make('layouts.menu-petani', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
-            <?php elseif(Auth::user()->role == 'admin' || Auth::user()->role == 'konsultan'): ?>
+            <?php elseif(Auth::user()->role == 'admin'): ?>
             <?php echo $__env->make('layouts.menu-admin', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+            <?php elseif(Auth::user()->role == 'konsultan'): ?>
+            <?php echo $__env->make('layouts.menu-konsultan', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
             <?php endif; ?>
         </div>
     </div>

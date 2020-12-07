@@ -12,6 +12,7 @@
                         <th>Email</th>
                         <th>Pekerjaan</th>
                         <th>Jenis Kelamin</th>
+                        <th>No HP</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -23,6 +24,7 @@
                         <td><?php echo e($data->email); ?></td>
                         <td><?php echo e($data->pekerjaan); ?></td>
                         <td><?php echo e($data->jenis_kelamin); ?></td>
+                    <td><?php echo e($data->nohp); ?></td>
                         <td>
                             <a class="btn btn-primary" href="<?php echo e(route('a.petani.show',['id' => $data->id])); ?>">Detail</a>
                             <a class="btn btn-warning" href="<?php echo e(route('a.petani.edit',['id' => $data->id])); ?>">Edit</a>

@@ -102,25 +102,24 @@ endif; ?>
                 
 
                 <div class="form-group">
-                    <label class="small mb-1" for="jenis_kelamin">Jenis Kelamin</label>
-                    <select class="form-control py-4" id="jenis_kelamin" name="jenis_kelamin">
-                        <option selected disabled>Pilih Jenis Kelamin</option>
-                        <option value="laki-laki">Laki - laki</option>
+                    <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                    <select class="form-control" id="exampleFormControlSelect1" name="jenis_kelamin">
+                        <option disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="laki-laki">Laki Laki</option>
                         <option value="perempuan">Perempuan</option>
-                      </select>
-                </div>
-                <?php if ($errors->has('jenis_kelamin')) :
+                    </select>
+                    <?php if ($errors->has('jenis_kelamin')) :
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('jenis_kelamin'); ?>
-                <br>
-                <span>
-                    <?php echo e(ucwords($message)); ?>
+                    <label class="small mb-1 text-danger">
+                        <?php echo e(ucwords($message)); ?>
 
-                </span>
-                <?php unset($message);
+                    </label>
+                    <?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
 endif; ?>
-                <br>
+                </div>
+                
                 <div class="form-group">
                     <label for="alamat">Alamat</label>
                 <textarea class="form-control" id="alamat" rows="3" name="alamat"cols="30" rows="10"><?php echo e(old('alamat')); ?></textarea>

@@ -40,8 +40,9 @@
                             <a class="btn btn-success" href="<?php echo e(route('p.i.'.$routes, ['id' => $thisID])); ?>">
                                 Detail
                             </a>
-                            <!-- <a class="btn btn-warning" href="<?php echo e(route('p.padi.edit', ['id' => $data->id])); ?>">Edit</a>
-                            <a class="btn btn-danger" href="<?php echo e(route('p.padi.delete', ['id' => $data->id])); ?>"> Delete</a>-->
+                            <a class="btn btn-success" href="<?php echo e(route('p.i.'.$routes. '.edit', ['id' => $thisID])); ?>">
+                                Ubah
+                            </a>
                         </td>
                     </tr>
                     <?php endif; ?>

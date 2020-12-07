@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 <div class="">
-  <a href="<?php echo e(route('profile.edit')); ?>" class="btn btn-primary">
+  <a href="<?php echo e(route('profile.edit')); ?>" class="btn btn-primary mb-3">
     Ubah Data Diri
   </a>
   <br>
@@ -13,6 +13,10 @@
             <tr>
               <th>Email</th>
               <td><?php echo e($data->email); ?></td>
+            </tr>
+            <tr>
+              <th>Nomor HP</th>
+              <td><?php echo e($data->nohp); ?></td>
             </tr>
             <tr>
               <th>Jenis Kelamin</th>

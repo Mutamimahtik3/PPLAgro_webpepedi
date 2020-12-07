@@ -14,11 +14,19 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('/chat', function () {
+//     return view('chat.index');
+// });
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::group(['middleware' => ['auth']], function () {
+	Route::get('/chat/','ChatController@index')->name('chat');
+	Route::get('/chat/{id}','ChatController@show')->name('chat.index');
+	Route::put('/chat/{id}','ChatController@store')->name('chat.send');
 	Route::get('/profile','ProfileController@index')->name('profile.index');
 	Route::get('/profile/edit','ProfileController@edit')->name('profile.edit');
 	Route::put('/profile/{id}/edit/','ProfileController@update')->name('profile.update');
@@ -127,9 +135,6 @@ Route::group(['middleware' => ['auth', 'checkRole:konsultan']], function () {
 });
 Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
 	Route::prefix('petani')->name('p.')->group(function () {
-		// Route::get('/', function () {
-		//     return 'pppp';
-		// });
 		Route::prefix('padi')->name('padi.')->group(function () {
 			Route::get('/','Petani\PadiController@index')
 				->name('index');	
@@ -137,16 +142,10 @@ Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
 				->name('create');		
 			Route::get('/{id}','Petani\PadiController@show')
 				->name('show');		
-			Route::get('/{id}/edit','Petani\PadiController@edit')
-				->name('edit');		
 			Route::post('/create','Petani\PadiController@store')
 				->name('store');
 			Route::put('/createProses/{jenis_padi}/{varietas}','Petani\PadiController@storeProses')
 				->name('store.proses');
-			Route::put('/{id}/update','Petani\PadiController@update')
-				->name('update');
-			Route::delete('/{id}','Petani\PadiController@destroy')
-				->name('delete');
 		});		
 		Route::prefix('indikator')->name('i.')->group(function () {
 
@@ -155,16 +154,28 @@ Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
 				->name('pra.tanam');
 			Route::get('/pratanam/{id}','Petani\IndikatorController@showPraTanam')
 				->name('pra.show');
+			Route::get('/pratanam/{id}/edit','Petani\IndikatorController@editPraTanam')
+				->name('pra.show.edit');
+			Route::put('/pratanam/{id}/edit','Petani\IndikatorController@updatePraTanam')
+				->name('pra.update');
 			// ==== PASCATANAM ====/
 			Route::get('/pascatanam','Petani\IndikatorController@pascaTanam')
 				->name('ps.tanam');
 			Route::get('/pascatanam/{id}','Petani\IndikatorController@showPascaTanam')
 				->name('ps.show');
+			Route::get('/pascatanam/{id}/edit','Petani\IndikatorController@editPascaTanam')
+				->name('ps.show.edit');
+			Route::put('/pascatanam/{id}/edit','Petani\IndikatorController@updatePascaTanam')
+				->name('ps.update');
 			// ==== TANAM ====/
 			Route::get('/tanam/{id}','Petani\IndikatorController@showTanam')
 				->name('in.show');	
 			Route::get('/tanam','Petani\IndikatorController@tanam')
 				->name('in.tanam');
+			Route::get('/tanam/{id}/edit','Petani\IndikatorController@editTanam')
+				->name('in.show.edit');
+			Route::put('/tanam/{id}/edit','Petani\IndikatorController@updateTanam')
+				->name('in.update');
 
 
 			Route::put('/tanam/{varietas}/{jenis_padi}','Petani\IndikatorController@inikatorTanam')

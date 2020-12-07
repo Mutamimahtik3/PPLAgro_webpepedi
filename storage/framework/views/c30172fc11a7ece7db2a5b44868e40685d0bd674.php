@@ -42,7 +42,7 @@ endif; ?>
     </form>
 </div>
 <div class="card-footer text-center">
-    <div class="small"><a href="register">Need an account? Sign up!</a></div>
+    <div class="small"><a href="register">Belum Punya Akun ? Daftar</a></div>
 </div>
 <?php $__env->stopSection(); ?>
 <?php echo $__env->make('auth.template', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\ppl-agro-main\ppl-agro-main\resources\views/auth/login.blade.php ENDPATH**/ ?>

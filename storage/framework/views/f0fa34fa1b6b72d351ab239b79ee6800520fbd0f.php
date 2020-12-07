@@ -8,16 +8,6 @@
 		<div class="form-group">
 			<label class="small mb-1" for="proses">Proses</label>
 
-			<div class="col-xl-3 col-md-6">
-				<div class="card bg-success text-white mb-4">
-					<div class="card-body">Penjadwalan Pratanam</div>
-					<div class="card-footer d-flex align-items-center justify-content-between">
-						<a class="small text-white stretched-link" href="<?php echo e(route('a.i.pr.pratanam')); ?>">View Details</a>
-						<div class="small text-white"><i class="fas fa-angle-right"></i></div>
-					</div>
-				</div>
-			</div>
-
 			<div class="form-check">
 			  <input class="form-check-input" type="radio" name="proses" id="r1" value="Pra-Tanam">
 			  <label class="form-check-label" for="r1">

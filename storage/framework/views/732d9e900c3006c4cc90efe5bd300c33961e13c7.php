@@ -22,4 +22,9 @@
     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
      Pratanam
     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+</a>
+<a class="nav-link collapsed" href="/chat" target="_blank">
+    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+    Konsultasi
+    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 </a><?php /**PATH D:\ppl-agro-main\ppl-agro-main\resources\views/layouts/side-konsultan.blade.php ENDPATH**/ ?>
