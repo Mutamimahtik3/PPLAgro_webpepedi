@@ -30,5 +30,16 @@ class UsersTableSeeder extends Seeder
 			'alamat' => 'rogojampi banyuwangi',
 			'pekerjaan' => 'buruh tani',
         ]);
+        User::create([
+            'id' => 3,
+            'role' => 'konsultan',
+            'name' => 'user konsultan',
+            'email' => 'k@gmail.com',
+            'password' => bcrypt('k'),
+            'nohp' => '08233213321',
+            'jenis_kelamin' => 'laki-laki',
+            'alamat' => 'rogojampi banyuwangi',
+            'pekerjaan' => 'konsultan',
+        ]);
     }
 }
