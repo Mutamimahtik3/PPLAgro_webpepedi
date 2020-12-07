@@ -42,8 +42,9 @@
                             <a class="btn btn-success" href="{{route('p.i.'.$routes, ['id' => $thisID])}}">
                                 Detail
                             </a>
-                            <!-- <a class="btn btn-warning" href="{{route('p.padi.edit', ['id' => $data->id])}}">Edit</a>
-                            <a class="btn btn-danger" href="{{route('p.padi.delete', ['id' => $data->id])}}"> Delete</a>-->
+                            <a class="btn btn-success" href="{{route('p.i.'.$routes. '.edit', ['id' => $thisID])}}">
+                                Ubah
+                            </a>
                         </td>
                     </tr>
                     @endif

@@ -4,6 +4,9 @@
 <div class="card mb-4">
     <div class="card-header">
         Hasil Rekomendasi Penjadwalan
+        <a href="{{route('p.i.pra.show.edit', ['id' => $data->id])}}" class="btn btn-primary btn-sm">
+            Ubah
+        </a>
     </div>
     <div class="card-body col-md-12">
         <div class="row justify-content-md-center">

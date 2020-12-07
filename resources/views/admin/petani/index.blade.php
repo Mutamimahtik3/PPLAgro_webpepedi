@@ -14,6 +14,7 @@
                         <th>Email</th>
                         <th>Pekerjaan</th>
                         <th>Jenis Kelamin</th>
+                        <th>No HP</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -25,6 +26,7 @@
                         <td>{{$data->email}}</td>
                         <td>{{$data->pekerjaan}}</td>
                         <td>{{$data->jenis_kelamin}}</td>
+                    <td>{{$data->nohp}}</td>
                         <td>
                             <a class="btn btn-primary" href="{{route('a.petani.show',['id' => $data->id])}}">Detail</a>
                             <a class="btn btn-warning" href="{{route('a.petani.edit',['id' => $data->id])}}">Edit</a>

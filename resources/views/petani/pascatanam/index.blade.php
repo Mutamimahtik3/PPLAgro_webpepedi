@@ -136,7 +136,6 @@
                                         </thead>
                                         <tbody>
                                             @foreach($data as $i => $data)
-                                            @if($data->penjadwalan->count()!=0)
                                             <tr>
                                                 <td>{{($i+1)}}</td>
                                                 <td>{{$data->padi->jenis_padi}}</td>
@@ -146,9 +145,11 @@
                                                     <a href="{{route('p.i.ps.show', ['id' => $data->id])}}" class="btn btn-link">
                                                         Detail
                                                     </a>
+                                                    <a href="{{route('p.i.ps.show.edit', ['id' => $data->id])}}" class="btn btn-link">
+                                                        Ubah
+                                                    </a>
                                                 </td>
                                             </tr>
-                                            @endif
                                             @endforeach
                                         </tbody>
                                     </table>

@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="">
-  <a href="{{route('profile.edit')}}" class="btn btn-primary">
+  <a href="{{route('profile.edit')}}" class="btn btn-primary mb-3">
     Ubah Data Diri
   </a>
   <br>
@@ -15,6 +15,10 @@
             <tr>
               <th>Email</th>
               <td>{{$data->email}}</td>
+            </tr>
+            <tr>
+              <th>Nomor HP</th>
+              <td>{{$data->nohp}}</td>
             </tr>
             <tr>
               <th>Jenis Kelamin</th>

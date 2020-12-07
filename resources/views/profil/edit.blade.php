@@ -33,19 +33,19 @@
                     <br>
 
                     <div class="form-group">
-                        <label class="small mb-1" for="jenis_kelamin">Jenis Kelamin</label>
-                        <select class="form-control py-4" id="jenis_kelamin" name="jenis_kelamin">
-                            <option value="laki-laki" {{$data->jenis_kelamin=='laki-laki' ? 'selected' : ''}}>Laki - laki</option>
+                        <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="jenis_kelamin">
+                            <option disabled selected>Pilih Jenis Kelamin</option>
+                            <option value="laki-laki" {{$data->jenis_kelamin=='laki-laki' ? 'selected' : ''}}>Laki Laki</option>
                             <option value="perempuan" {{$data->jenis_kelamin=='laki-laki' ? 'selected' : ''}}>Perempuan</option>
-                          </select>
+                        </select>
+                        @error('jenis_kelamin')
+                        <label class="small mb-1 text-danger">
+                            {{ucwords($message)}}
+                        </label>
+                        @enderror
                     </div>
-                    @error('jenis_kelamin')
-                    <br>
-                    <span>
-                        {{ ucwords($message) }}
-                    </span>
-                    @enderror
-                    <br>
+                    
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
                     <textarea class="form-control" id="alamat" rows="3" name="alamat">{{$data->alamat}}</textarea>

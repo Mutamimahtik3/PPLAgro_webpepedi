@@ -136,7 +136,6 @@
                                         </thead>
                                         <tbody>
                                             @foreach($data as $i => $data)
-                                            @if($data->penjadwalan->count()!=0)
                                             <tr>
                                                 <td>{{($i+1)}}</td>
                                                 <td>{{$data->padi->jenis_padi}}</td>
@@ -148,7 +147,6 @@
                                                     </a>
                                                 </td>
                                             </tr>
-                                            @endif
                                             @endforeach
                                         </tbody>
                                     </table>
