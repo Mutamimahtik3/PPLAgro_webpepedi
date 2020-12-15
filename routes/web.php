@@ -15,9 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Route::get('/chat', function () {
-//     return view('chat.index');
-// });
+Route::get('/detailtest', function () {
+    return view('admin.artikel.detail');
+});
+
+Route::get('/test', function () {
+    return view('chat.test');
+});
 
 Auth::routes();
 
@@ -61,6 +65,22 @@ Route::group(['middleware' => ['auth', 'checkRole:admin']], function () {
 				->name('update');
 			Route::post('/create','Admin\KonsultanController@store')
 				->name('store');
+		});
+		Route::prefix('artikel')->name('artikel.')->group(function () {
+			Route::get('/','Admin\ArtikelController@index')
+				->name('index');
+			Route::get('/create','Admin\ArtikelController@create')
+				->name('create');
+			Route::get('/{id}','Admin\ArtikelController@show')
+				->name('show');
+			Route::get('/{id}/edit','Admin\ArtikelController@edit')
+				->name('edit');
+			Route::put('/{id}/update','Admin\ArtikelController@update')
+				->name('update');
+			Route::post('/create','Admin\ArtikelController@store')
+				->name('store');
+			Route::delete('/delete/{id}','Admin\ArtikelController@destroy')
+				->name('delete');
 		});
 		Route::prefix('indikator')->name('i.')->group(function () {
 			Route::prefix('pratanam')->name('pr.')->group(function () {
@@ -130,11 +150,62 @@ Route::group(['middleware' => ['auth', 'checkRole:konsultan']], function () {
 				Route::get('/{id}','Konsultan\IndikatorTanamController@show')
 					->name('show');
 			});
+
+
+
+			Route::prefix('pratanam')->name('pr.')->group(function () {
+				Route::get('/','Admin\IndikatorPratanamController@index')
+					->name('pratanam');
+				Route::get('/{id}','Admin\IndikatorPratanamController@show')
+					->name('show');
+				Route::get('/{id}/penjadwalan','Admin\IndikatorPratanamController@edit')
+					->name('edit');
+				Route::put('/{id}/unggah','Admin\IndikatorPratanamController@update')
+					->name('update');
+				Route::get('/{id}/penjadwalan/{idjadwal}/ubah','Admin\IndikatorPratanamController@editJadwal')
+					->name('ubah.jadwal');
+				Route::put('/{id}/penjadwalan/{idjadwal}/ubah','Admin\IndikatorPratanamController@updateJadwal')
+					->name('update.jadwal');
+			});
+			Route::prefix('pascatanam')->name('ps.')->group(function () {
+				Route::get('/','Admin\IndikatorPascaTanamController@index')
+					->name('pascatanam');
+				Route::get('/{id}','Admin\IndikatorPascaTanamController@show')
+					->name('show');
+				Route::get('/{id}/penjadwalan','Admin\IndikatorPascaTanamController@edit')
+					->name('edit');
+				Route::put('/{id}/unggah','Admin\IndikatorPascaTanamController@update')
+					->name('update');
+				Route::get('/{id}/penjadwalan/{idjadwal}/ubah','Admin\IndikatorPascaTanamController@editJadwal')
+					->name('ubah.jadwal');
+				Route::put('/{id}/penjadwalan/{idjadwal}/ubah','Admin\IndikatorPascaTanamController@updateJadwal')
+					->name('update.jadwal');
+			});
+			Route::prefix('tanam')->name('tn.')->group(function () {
+				Route::get('/','Admin\IndikatorTanamController@index')
+					->name('tanam');
+				Route::get('/{id}','Admin\IndikatorTanamController@show')
+					->name('show');
+				Route::get('/{id}/penjadwalan','Admin\IndikatorTanamController@edit')
+					->name('edit');
+				Route::put('/{id}/unggah','Admin\IndikatorTanamController@update')
+					->name('update');
+				Route::get('/{id}/penjadwalan/{idjadwal}/ubah','Admin\IndikatorTanamController@editJadwal')
+					->name('ubah.jadwal');
+				Route::put('/{id}/penjadwalan/{idjadwal}/ubah','Admin\IndikatorTanamController@updateJadwal')
+					->name('update.jadwal');
+			});
 		});
 	});
 });
 Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
 	Route::prefix('petani')->name('p.')->group(function () {
+		Route::prefix('artikel')->name('artikel.')->group(function () {
+			Route::get('/','Admin\ArtikelController@index')
+				->name('index');
+			Route::get('/{id}','Admin\ArtikelController@show')
+				->name('show');
+		});
 		Route::prefix('padi')->name('padi.')->group(function () {
 			Route::get('/','Petani\PadiController@index')
 				->name('index');	
