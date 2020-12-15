@@ -18,6 +18,7 @@ class CreatePascaTanamsTable extends Migration
             $table->unsignedBigInteger('padi_id');
             $table->date('tgl_panen');
             $table->string('kondisi_gabah');
+            $table->enum('status',['belum terjadi','sudah terjadi','catatan salah'])->default('belum terjadi');
             
             $table->timestamps();
             $table->foreign('padi_id')

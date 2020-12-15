@@ -22,6 +22,8 @@ class CreateTanamsTable extends Migration
             $table->string('jenis_pupuk');
             $table->string('ph_tanah');
             $table->string('kondisi_tanaman');
+            $table->enum('status',['belum terjadi','sudah terjadi','catatan salah'])->default('belum terjadi');
+            
             $table->timestamps();
             
             $table->foreign('padi_id')

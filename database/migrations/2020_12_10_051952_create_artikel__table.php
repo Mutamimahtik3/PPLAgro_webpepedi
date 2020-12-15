@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePratanamsTable extends Migration
+class CreateArtikelTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,18 +13,17 @@ class CreatePratanamsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pratanam', function (Blueprint $table) {
+        Schema::create('artikel', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('padi_id');
-            $table->date('tgl_persemaian');
-            $table->integer('banyak_benih');
-            $table->string('jenis_tanah', 30);
-            $table->enum('status',['belum terjadi','sudah terjadi','catatan salah'])->default('belum terjadi');
+            $table->unsignedBigInteger('user_id');
+            $table->string('judul', 30);
+            $table->string('gambar');
+            $table->longText('isi');
+            $table->enum('kategori',['artikel', 'berita']);
             $table->timestamps();
-
-            $table->foreign('padi_id')
+            $table->foreign('user_id')
                 ->references('id')
-                ->on('padi')
+                ->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('cascade');
         });
@@ -37,6 +36,6 @@ class CreatePratanamsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pratanam');
+        Schema::dropIfExists('artikel');
     }
 }
