@@ -6,6 +6,10 @@
 <center>
 	<table class="table table-bordered table-stripped col-md-7" align="center">
 		<tr>
+			<td>Status</td>
+			<td>{{ucwords($data->status)}}</td>
+		</tr>
+		<tr>
 			<td>Jenis Padi</td>
 			<td>{{$data->padi->jenis_padi}}</td>
 		</tr>
@@ -27,8 +31,9 @@
 		</tr>
 	</table>
 
-	
-	<a href="{{route('a.i.pr.edit', ['id' => $data->id])}}" class="btn btn-primary">Tambah Rekomendasi</a>
+	@if(Auth::user()->role=='konsultan')
+	<a href="{{route('k.i.pr.edit', ['id' => $data->id])}}" class="btn btn-primary">Tambah Rekomendasi</a>
+	@endif
 	<br>
 	<hr>
 	<h2>Rekomendasi Penjadwalan</h2>
@@ -39,7 +44,10 @@
 			<th>Tanggal</th>
 			<th>Waktu</th>
 			<th>Tips dan Trik</th>
+			@if(Auth::user()->role=='konsultan')
 			<th>#</th>
+			@endif
+
 		</thead>
 		<tbody>
 			@forelse($data->penjadwalan as $index => $jadwal)
@@ -49,9 +57,12 @@
 				<td>{{$jadwal->tanggal}}</td>
 				<td>{{$jadwal->waktu}}</td>
 				<td>{{$jadwal->tips_dan_trik}}</td>
+				@if(Auth::user()->role=='konsultan')	
 				<td>
-					<a href="{{route('a.i.pr.ubah.jadwal', ['id' => $data->id, 'idjadwal' => $jadwal->id])}}">Ubah</a>
+					<a href="{{route('k.i.pr.ubah.jadwal', ['id' => $data->id, 'idjadwal' => $jadwal->id])}}">Ubah</a>
 				</td>
+				@endif
+
 			</tr>
 			@empty
 				<h3>Belum ada rekomendasi penjadwalan</h3>

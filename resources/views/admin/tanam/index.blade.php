@@ -31,7 +31,11 @@
 				<td>{{$data->ph_tanah}}</td>
 				<td>{{$data->kondisi_tanaman}}</td>
 				<td>
+					@if(Auth::user()->role=='konsultan')
+					<a href="{{route('k.i.tn.show', ['id' => $data->id])}}">Detail</a>
+					@elseif(Auth::user()->role=='admin')
 					<a href="{{route('a.i.tn.show', ['id' => $data->id])}}">Detail</a>
+					@endif
 				</td>
 			</tr>
 			@endforeach

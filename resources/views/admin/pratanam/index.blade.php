@@ -22,7 +22,11 @@
 				<td>{{$data->banyak_benih}}</td>
 				<td>{{$data->jenis_tanah}}</td>
 				<td>
+					@if(Auth::user()->role=='konsultan')
+					<a href="{{route('k.i.pr.show', ['id' => $data->id])}}">Detail</a>
+					@elseif(Auth::user()->role=='admin')
 					<a href="{{route('a.i.pr.show', ['id' => $data->id])}}">Detail</a>
+					@endif
 				</td>
 			</tr>
 			@endforeach

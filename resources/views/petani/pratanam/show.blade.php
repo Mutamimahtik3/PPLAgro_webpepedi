@@ -13,6 +13,10 @@
             <table class="table table-bordered table-stripped text-center col-md-7">
                 <tbody>
                     <tr>
+                        <td>Status</td>
+                        <td>{{ucwords($data->status)}}</td>
+                    </tr>
+                    <tr>
                         <td>Nama</td>
                         <td>{{$data->padi->jenis_padi}}</td>
                     </tr>

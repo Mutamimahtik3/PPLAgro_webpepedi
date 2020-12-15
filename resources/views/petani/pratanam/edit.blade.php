@@ -4,6 +4,25 @@
 	@csrf
 	@method('put')
 		<div class="form-group">
+		<label class="small mb-1" for="padi">Status</label>
+		<select name="status" class="form-control">
+			<option value="{{strtolower('Belum Terjadi')}}" {{$data->status=='belum terjadi' ? 'selected' : ''}}>
+				Belum Terjadi
+			</option>
+			<option value="{{strtolower('Sudah Terjadi')}}" {{$data->status=='sudah terjadi' ? 'selected' : ''}}>
+				Sudah Terjadi
+			</option>
+			<option value="{{strtolower('Catatan Salah')}}" {{$data->status=='catatan salah' ? 'selected' : ''}}>
+				Catatan Salah
+			</option>
+		</select>
+		@error('status')
+		<small class="text-danger">
+			{{ ucwords($message) }}
+		</small>
+		@enderror
+		</div>
+		<div class="form-group">
 			<label class="small mb-1" for="padi">Jenis Padi</label>
 		<input class="form-control py-4" id="padi" type="text" placeholder="Jenis Padi" name="jenis_padi" value="{{$data->padi->jenis_padi}}"/>
 		</div>

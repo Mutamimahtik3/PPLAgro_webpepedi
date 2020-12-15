@@ -1,7 +1,7 @@
 @extends('base')
 @section('content')
 <center>
-		<form action="{{route('a.i.pr.update', ['id' => $data->id])}}" method="POST">
+		<form action="{{route('k.i.pr.update', ['id' => $data->id])}}" method="POST">
 		@csrf
 		@method('put')	
 			<div class="form-group">
