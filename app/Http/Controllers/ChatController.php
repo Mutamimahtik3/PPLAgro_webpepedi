@@ -11,12 +11,17 @@ class ChatController extends Controller
 {
     public function index()
     {
-        $data = User::where('id','!=',Auth::user()->id)->get();
+        $data = User::where('id','!=',Auth::user()->id)
+            ->where('role','!=','admin')
+            ->where('role','!=',Auth::user()->role)
+            ->get();
         return view('chat.awal', compact('data'));
     }
     public function show($id)
     {
-    	
+    	if ($id == Auth::user()->id) {
+            return abort(404);
+        }
     	$userid = Auth::user()->id;
     	$to = $id;
     	$subject = User::find($to);

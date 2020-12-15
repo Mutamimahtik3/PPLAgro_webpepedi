@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class IndikatorPascaTanamController extends Controller
 {
-    public $route = 'a.i.pr.pascatanam';
+    public $route = 'k.i.pr.pascatanam';
     public function index()
     {
     	$data = PascaTanam::All();
@@ -40,7 +40,7 @@ class IndikatorPascaTanamController extends Controller
     		'nama_proses' => $request->nama_proses,
     		'tips_dan_trik' => $request->tips_dan_trik,
     	]);
-    	return redirect()->route('a.i.ps.show', ['id' => $id]);
+    	return redirect()->route('k.i.ps.show', ['id' => $id]);
     }
     public function editJadwal($id, $idjadwal)
     {
@@ -64,6 +64,6 @@ class IndikatorPascaTanamController extends Controller
             'nama_proses' => $request->nama_proses,
             'tips_dan_trik' => $request->tips_dan_trik,
         ]);
-        return redirect()->route('a.i.ps.show', ['id' => $id]);
+        return redirect()->route('k.i.ps.show', ['id' => $id]);
     }
 }

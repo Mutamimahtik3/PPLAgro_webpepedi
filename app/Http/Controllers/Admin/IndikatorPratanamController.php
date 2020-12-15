@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 
 class IndikatorPratanamController extends Controller
 {
-	public $route = 'a.i.pr.pratanam';
+	public $route = 'k.i.pr.pratanam';
     public function index()
     {
     	$data = Pratanam::All();
@@ -40,7 +40,7 @@ class IndikatorPratanamController extends Controller
     		'nama_proses' => $request->nama_proses,
     		'tips_dan_trik' => $request->tips_dan_trik,
     	]);
-    	return redirect()->route('a.i.pr.show', ['id' => $id]);
+    	return redirect()->route('k.i.pr.show', ['id' => $id]);
     }
     public function editJadwal($id, $idjadwal)
     {
@@ -64,6 +64,6 @@ class IndikatorPratanamController extends Controller
             'nama_proses' => $request->nama_proses,
             'tips_dan_trik' => $request->tips_dan_trik,
         ]);
-        return redirect()->route('a.i.pr.show', ['id' => $id]);
+        return redirect()->route('k.i.pr.show', ['id' => $id]);
     }
 }

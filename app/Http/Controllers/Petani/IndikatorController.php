@@ -20,13 +20,13 @@ class IndikatorController extends Controller
 			'jenis_padi' => $jenis_padi,
 			'varietas' => $varietas,
     	]);
-    	Pratanam::create([
+    	$data = Pratanam::create([
     		'padi_id' => $padi->id,
 			'tgl_persemaian' => $request->tgl_persemaian,
 			'banyak_benih' => $request->banyak_benih,
 			'jenis_tanah' => $request->jenis_tanah,
     	]);
-    	return redirect()->route($this->route);
+    	return redirect()->route('p.i.pra.show', ['id' => $data->id]);
     }
     public function inikatorPascatanam(Request $request, $varietas, $jenis_padi)
     {
@@ -35,12 +35,12 @@ class IndikatorController extends Controller
             'jenis_padi' => $jenis_padi,
             'varietas' => $varietas,
         ]);
-        PascaTanam::create([
+        $data = PascaTanam::create([
             'padi_id' => $padi->id,
             'tgl_panen' => $request->tgl_panen,
             'kondisi_gabah' => $request->kondisi_gabah,
         ]);
-        return redirect()->route($this->route);
+        return redirect()->route('p.i.ps.show', ['id' => $data->id]);
     }
     public function inikatorTanam(Request $request, $varietas, $jenis_padi)
     {
@@ -49,7 +49,7 @@ class IndikatorController extends Controller
             'jenis_padi' => $jenis_padi,
             'varietas' => $varietas,
         ]);
-        Tanam::create([
+        $data = Tanam::create([
             'padi_id' => $padi->id,
             'lokasi' => $request->lokasi,
             'luas_lahan' => $request->luas_lahan,
@@ -58,7 +58,7 @@ class IndikatorController extends Controller
             'ph_tanah' => $request->ph_tanah,
             'kondisi_tanaman' => $request->kondisi_tanaman,
         ]);
-        return redirect()->route($this->route);
+        return redirect()->route('p.i.in.show', ['id' => $data->id]);
     }
     
     public function praTanam()
@@ -119,6 +119,7 @@ class IndikatorController extends Controller
     public function updatePascaTanam($id, Request $request)
     {
         $request->validate([
+            'status' => 'required',
             'jenis_padi' => 'required|string|max:255',
             'varietas' => 'required|string|max:255',
             'tgl_panen' => 'required',
@@ -127,6 +128,7 @@ class IndikatorController extends Controller
         $x = PascaTanam::find($id);
         $y = $x->padi->id;
         $x->update([
+            'status' => $request->status,
             'tgl_panen' => $request->tgl_panen,
             'kondisi_gabah' => $request->kondisi_gabah,
         ]);
@@ -140,6 +142,7 @@ class IndikatorController extends Controller
     public function updatePraTanam($id, Request $request)
     {
         $request->validate([
+            'status' => 'required',
             'jenis_padi' => 'required|string|max:255',
             'varietas' => 'required|string|max:255',
             'tgl_persemaian' => 'required',
@@ -149,6 +152,7 @@ class IndikatorController extends Controller
         $x = Pratanam::find($id);
         $y = $x->padi->id;
         $x->update([
+            'status' => $request->status,
             'tgl_persemaian' => $request->tgl_persemaian,
             'banyak_benih' => $request->banyak_benih,
             'jenis_tanah' => $request->jenis_tanah,
@@ -163,6 +167,7 @@ class IndikatorController extends Controller
     public function updateTanam($id, Request $request)
     {
         $request->validate([
+            'status' => 'required',
             'jenis_padi' => 'required|string|max:255',
             'varietas' => 'required|string|max:255',
             'lokasi' => 'required',
@@ -175,6 +180,7 @@ class IndikatorController extends Controller
         $x = Tanam::find($id);
         $y = $x->padi->id;
         $x->update([
+            'status' => $request->status,
             'lokasi' => $request->lokasi,
             'luas_lahan' => $request->luas_lahan,
             'jenis_tanah' => $request->jenis_tanah,

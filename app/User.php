@@ -49,4 +49,8 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Chat','reciever_id');
     }
+    public function artikel()
+    {
+        return $this->hasMany('App\Artikel','user_id');
+    }
 }
