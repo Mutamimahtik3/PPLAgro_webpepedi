@@ -36,8 +36,8 @@
                         <label for="exampleFormControlSelect1">Jenis Kelamin</label>
                         <select class="form-control" id="exampleFormControlSelect1" name="jenis_kelamin">
                             <option disabled selected>Pilih Jenis Kelamin</option>
-                            <option value="laki-laki">Laki Laki</option>
-                            <option value="perempuan">Perempuan</option>
+                            <option value="laki-laki" {{($data->jenis_kelamin === 'laki-laki') ? 'Selected' : ''}}>Laki Laki</option>
+                            <option value="perempuan" {{($data->jenis_kelamin === 'perempuan') ? 'Selected' : ''}}>Perempuan</option>
                         </select>
                         @error('jenis_kelamin')
                         <label class="small mb-1 text-danger">

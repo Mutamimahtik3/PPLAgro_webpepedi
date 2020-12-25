@@ -3,7 +3,7 @@
 @section('content')
     {{-- <div class="jumbotron text-center"> --}}
         @if (Auth::user()->role == 'admin')
-            <a class="btn btn-primary mb-3" href="{{route('a.petani.create')}}">Tambah Artikel</a>
+            <a class="btn btn-primary mb-3" href="{{route('a.artikel.create')}}">Tambah Artikel</a>
         @endif
         <div class="album py-5 bg-light">
             <div class="container">
@@ -11,7 +11,7 @@
                     @foreach($data as $data)
                     <div class="col-md-4">
                         <div class="car box-shadow">
-                            <img src="{{asset(Storage::url('public/artikel/'.$data->gambar))}}" alt="Thumbnail [100%x225]" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" class="card-img-top" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
+                            <img src="{{asset('artikel/'.$data->gambar)}}" alt="Thumbnail [100%x225]" data-src="holder.js/100px225?theme=thumb&bg=55595c&fg=eceeef&text=Thumbnail" class="card-img-top" style="height: 225px; width: 100%; display: block;" data-holder-rendered="true">
                             <div class="card-body">
                                 <p class="card-text">
                                     {{$data->judul}}

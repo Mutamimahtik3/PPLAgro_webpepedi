@@ -2,7 +2,7 @@
 
 @section('content')
 @if (Auth::user()->role == 'admin')
-    <a class="btn btn-primary mb-3" href="{{route('a.petani.create')}}">Tambah Petani</a>
+    <a class="btn btn-primary mb-3" href="{{route('a.artikel.create')}}">Tambah Artikel</a>
 @endif
 <div class="card mb-4">
     <div class="card-body">

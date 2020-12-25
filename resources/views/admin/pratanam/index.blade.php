@@ -5,7 +5,8 @@
 	<table width="70%" class="table table-bordered table-stripped">
 		<thead>
 			<th>No</th>
-			<th>Nama</th>
+			<th>Jenis Padi</th>
+			<th>Tipe Padi</th>
 			<th>Varietas</th>
 			<th>Tanggal Persemaian</th>
 			<th>Banyak Benih</th>
@@ -17,6 +18,7 @@
 			<tr>
 				<td>{{($index + 1)}}</td>
 				<td>{{$data->padi->jenis_padi}}</td>
+				<td>{{$data->padi->tipe_padi}}</td>
 				<td>{{$data->padi->varietas}}</td>
 				<td>{{$data->tgl_persemaian}}</td>
 				<td>{{$data->banyak_benih}}</td>

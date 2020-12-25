@@ -29,7 +29,7 @@
             <div class="form-group">
             <label class="small mb-1" for="gambar">Gambar</label>
             <input class="form-control" id="gambar" type="file" name="gambar"/>
-            <img src="{{asset(Storage::url('public/artikel/'.$data->gambar))}}" height="200px">
+            <img src="{{asset('artikel/'.$data->gambar)}}" height="200px">
             </div>
             @error('gambar')
             <span>

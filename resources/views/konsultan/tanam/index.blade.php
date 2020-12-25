@@ -8,7 +8,8 @@
 	<table width="70%" class="table table-bordered table-stripped">
 		<thead>
 			<th>No</th>
-			<th>Nama</th>
+			<th>Jenis Padi</th>
+			<th>Tipe Padi</th>
 			<th>Varietas</th>
 			<th>lokasi</th>
 			<th>luas_lahan</th>
@@ -23,6 +24,7 @@
 			<tr>
 				<td>{{($index + 1)}}</td>
 				<td>{{$data->padi->jenis_padi}}</td>
+				<td>{{$data->padi->tipe_padi}}</td>
 				<td>{{$data->padi->varietas}}</td>
 				<td>{{$data->lokasi}}</td>
 				<td>{{$data->luas_lahan}}</td>

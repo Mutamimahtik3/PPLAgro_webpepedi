@@ -11,6 +11,7 @@
             <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <th>No</th>
+                    <th>Tipe Padi</th>
                     <th>Jenis</th>
                     <th>Varietas</th>
                     <th>Action</th>
@@ -28,7 +29,7 @@
                         $thisID = $data->pascatanam[0]->id;
                     }elseif(count($data->tanam)!=0){
                         $routes = 'in.show';
-                        $thisID = $data->tanam[0]->id;                        
+                        $thisID = $data->tanam[0]->id;
                     }else{
                         $routes = 'error';
                     }
@@ -36,15 +37,16 @@
                     @if($routes != 'error')
                     <tr>
                         <td>{{($i+1)}}</td>
+                        <td>{{$data->tipe_padi}}</td>
                         <td>{{$data->jenis_padi}}</td>
                         <td>{{$data->varietas}}</td>
                         <td>
                             <a class="btn btn-success" href="{{route('p.i.'.$routes, ['id' => $thisID])}}">
                                 Detail
                             </a>
-                            <a class="btn btn-success" href="{{route('p.i.'.$routes. '.edit', ['id' => $thisID])}}">
+                            <!-- <a class="btn btn-success" href="{{route('p.i.'.$routes. '.edit', ['id' => $thisID])}}">
                                 Ubah
-                            </a>
+                            </a> -->
                         </td>
                     </tr>
                     @endif
@@ -53,5 +55,5 @@
             </table>
         </div>
     </div>
-</div>    
+</div>
 @endsection

@@ -27,7 +27,7 @@
 
             <div class="form-group">
             <label class="small mb-1" for="gambar">Gambar</label>
-            <input class="form-control" id="gambar" type="file" name="gambar" value="{{old('gambar')}}"/>
+            <input class="form-control" id="gambar" type="file" name="gambar" accept="image/*" value="{{old('gambar')}}"/>
             </div>
             @error('gambar')
             <span>

@@ -145,9 +145,9 @@
                                                     <a href="{{route('p.i.ps.show', ['id' => $data->id])}}" class="btn btn-link">
                                                         Detail
                                                     </a>
-                                                    <a href="{{route('p.i.ps.show.edit', ['id' => $data->id])}}" class="btn btn-link">
+                                                    <!-- <a href="{{route('p.i.ps.show.edit', ['id' => $data->id])}}" class="btn btn-link">
                                                         Ubah
-                                                    </a>
+                                                    </a> -->
                                                 </td>
                                             </tr>
                                             @endforeach

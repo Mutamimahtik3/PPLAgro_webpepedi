@@ -22,7 +22,7 @@
                     <br>
                     <div class="form-group">
                         <label class="small mb-1" for="inputEmailAddress">No Hp</label>
-                        <input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="No HP" name="nohp" value="{{$data->nohp}}"/>
+                        <input class="form-control py-4" id="inputEmailAddress" type="number" placeholder="No HP" name="nohp" value="{{$data->nohp}}"/>
                     </div>
                     @error('nohp')
                     <br>
@@ -36,8 +36,8 @@
                         <label for="exampleFormControlSelect1">Jenis Kelamin</label>
                         <select class="form-control" id="exampleFormControlSelect1" name="jenis_kelamin">
                             <option disabled selected>Pilih Jenis Kelamin</option>
-                            <option value="laki-laki" {{$data->jenis_kelamin=='laki-laki' ? 'selected' : ''}}>Laki Laki</option>
-                            <option value="perempuan" {{$data->jenis_kelamin=='laki-laki' ? 'selected' : ''}}>Perempuan</option>
+                            <option value="laki-laki" {{($data->jenis_kelamin === 'laki-laki') ? 'Selected' : ''}}>Laki Laki</option>
+                            <option value="perempuan" {{($data->jenis_kelamin === 'perempuan') ? 'Selected' : ''}}>Perempuan</option>
                         </select>
                         @error('jenis_kelamin')
                         <label class="small mb-1 text-danger">
