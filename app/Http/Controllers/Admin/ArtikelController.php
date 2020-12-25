@@ -45,8 +45,10 @@ class ArtikelController extends Controller
             'konten' => 'required',
             'kategori' => 'required',
         ]);
-        $nameFile = date('Y-m-d H:i:s').' '.$request->file('gambar')->getClientOriginalName();
-        $request->file('gambar')->storeAs('public/artikel/',$nameFile);
+        $tempatfile = ('artikel');
+        $files = $request->file('gambar');
+        $nameFile = $files->getClientOriginalName();
+        $files->move($tempatfile,$nameFile);
         Artikel::create([
             'user_id' => Auth::user()->id,
             'judul' => $request->judul,
@@ -97,8 +99,10 @@ class ArtikelController extends Controller
             'kategori' => 'required',
         ]);
         if ($request->file('gambar')) {
-            $nameFile = date('Y-m-d H:i:s').' '.$request->file('gambar')->getClientOriginalName();
-            $request->file('gambar')->storeAs('public/artikel/',$nameFile);
+            $tempatfile = ('artikel');
+            $files = $request->file('gambar');
+            $nameFile = $files->getClientOriginalName();
+            $files->move($tempatfile,$nameFile);
             Artikel::whereId($id)
             ->update([
                 'judul' => $request->judul,

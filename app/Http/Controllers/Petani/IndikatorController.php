@@ -13,12 +13,13 @@ use App\Http\Controllers\Controller;
 class IndikatorController extends Controller
 {
     public $route = 'p.padi.index';
-    public function inikatorPrataman(Request $request, $varietas, $jenis_padi)
+    public function inikatorPrataman(Request $request, $varietas, $jenis_padi, $tipe_padi)
     {
     	$padi = Padi::create([
     		'user_id' => Auth::user()->id,
 			'jenis_padi' => $jenis_padi,
-			'varietas' => $varietas,
+            'varietas' => $varietas,
+            'tipe_padi' => $tipe_padi,
     	]);
     	$data = Pratanam::create([
     		'padi_id' => $padi->id,
@@ -28,12 +29,13 @@ class IndikatorController extends Controller
     	]);
     	return redirect()->route('p.i.pra.show', ['id' => $data->id]);
     }
-    public function inikatorPascatanam(Request $request, $varietas, $jenis_padi)
+    public function inikatorPascatanam(Request $request, $varietas, $jenis_padi, $tipe_padi)
     {
         $padi = Padi::create([
             'user_id' => Auth::user()->id,
             'jenis_padi' => $jenis_padi,
             'varietas' => $varietas,
+            'tipe_padi' => $tipe_padi,
         ]);
         $data = PascaTanam::create([
             'padi_id' => $padi->id,
@@ -42,15 +44,17 @@ class IndikatorController extends Controller
         ]);
         return redirect()->route('p.i.ps.show', ['id' => $data->id]);
     }
-    public function inikatorTanam(Request $request, $varietas, $jenis_padi)
+    public function inikatorTanam(Request $request, $varietas, $jenis_padi, $tipe_padi)
     {
         $padi = Padi::create([
             'user_id' => Auth::user()->id,
             'jenis_padi' => $jenis_padi,
             'varietas' => $varietas,
+            'tipe_padi' => $tipe_padi,
         ]);
         $data = Tanam::create([
             'padi_id' => $padi->id,
+            'kecamatan' => $request->kecamatan,
             'lokasi' => $request->lokasi,
             'luas_lahan' => $request->luas_lahan,
             'jenis_tanah' => $request->jenis_tanah,
@@ -136,6 +140,7 @@ class IndikatorController extends Controller
         ->update([
             'jenis_padi' => $request->jenis_padi, 
             'varietas' => $request->varietas, 
+            'tipe_padi' => $request->tipe_padi,
         ]);
         return redirect()->route('p.i.ps.show', ['id' => $id]);
     }
@@ -147,7 +152,8 @@ class IndikatorController extends Controller
             'varietas' => 'required|string|max:255',
             'tgl_persemaian' => 'required',
             'banyak_benih' => 'required',            
-            'jenis_tanah' => 'required',            
+            'jenis_tanah' => 'required',   
+            'tipe_padi' => 'required',   
         ]);
         $x = Pratanam::find($id);
         $y = $x->padi->id;
@@ -161,12 +167,14 @@ class IndikatorController extends Controller
         ->update([
             'jenis_padi' => $request->jenis_padi, 
             'varietas' => $request->varietas, 
+            'tipe_padi' => $request->tipe_padi,
         ]);
         return redirect()->route('p.i.pra.show', ['id' => $id]);
     }
     public function updateTanam($id, Request $request)
     {
         $request->validate([
+            'kecamatan' => 'required',
             'status' => 'required',
             'jenis_padi' => 'required|string|max:255',
             'varietas' => 'required|string|max:255',
@@ -175,7 +183,9 @@ class IndikatorController extends Controller
             'jenis_tanah' => 'required',
             'jenis_pupuk' => 'required',
             'ph_tanah' => 'required',
-            'kondisi_tanaman' => 'required',     
+            'kondisi_tanaman' => 'required',    
+            'tipe_padi' => 'required',   
+
         ]);
         $x = Tanam::find($id);
         $y = $x->padi->id;
@@ -187,11 +197,14 @@ class IndikatorController extends Controller
             'jenis_pupuk' => $request->jenis_pupuk ,
             'ph_tanah' => $request->ph_tanah ,
             'kondisi_tanaman' => $request->kondisi_tanaman ,
+              
+
         ]);
         Padi::whereId($y)
         ->update([
             'jenis_padi' => $request->jenis_padi, 
             'varietas' => $request->varietas, 
+            'tipe_padi' => $request->tipe_padi,
         ]);
         return redirect()->route('p.i.in.show', ['id' => $id]);
     }
