@@ -16,6 +16,7 @@ class CreateTanamsTable extends Migration
         Schema::create('tanam', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('padi_id');
+            $table->string('kecamatan');
             $table->string('lokasi');
             $table->string('luas_lahan');
             $table->string('jenis_tanah');

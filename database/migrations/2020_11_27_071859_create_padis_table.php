@@ -17,7 +17,9 @@ class CreatePadisTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
             $table->string('jenis_padi');
-            $table->string('varietas');
+            $table->enum('varietas',['hibrida','unggul','padi lokal']);
+            $table->enum('tipe_padi',['padi wangi','padi pera','padi pulen']);
+            
             $table->timestamps();
             $table->foreign('user_id')
                 ->references('id')

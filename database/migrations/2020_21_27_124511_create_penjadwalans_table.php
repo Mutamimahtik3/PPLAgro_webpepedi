@@ -22,6 +22,9 @@ class CreatePenjadwalansTable extends Migration
             $table->time('waktu');
             $table->string('nama_proses');
             $table->text('tips_dan_trik');
+            $table->enum('status',['sudah dilakukan','belum dilakukan','gagal'])->default('belum dilakukan');
+            $table->text('catatan')->nullable();
+            
             $table->timestamps();
 
             $table->foreign('pratanam_id')
