@@ -25,7 +25,7 @@ endif; ?>
                     <br>
                     <div class="form-group">
                         <label class="small mb-1" for="inputEmailAddress">No Hp</label>
-                        <input class="form-control py-4" id="inputEmailAddress" type="text" placeholder="No HP" name="nohp" value="<?php echo e($data->nohp); ?>"/>
+                        <input class="form-control py-4" id="inputEmailAddress" type="number" placeholder="No HP" name="nohp" value="<?php echo e($data->nohp); ?>"/>
                     </div>
                     <?php if ($errors->has('nohp')) :
 if (isset($message)) { $messageCache = $message; }
@@ -44,8 +44,8 @@ endif; ?>
                         <label for="exampleFormControlSelect1">Jenis Kelamin</label>
                         <select class="form-control" id="exampleFormControlSelect1" name="jenis_kelamin">
                             <option disabled selected>Pilih Jenis Kelamin</option>
-                            <option value="laki-laki" <?php echo e($data->jenis_kelamin=='laki-laki' ? 'selected' : ''); ?>>Laki Laki</option>
-                            <option value="perempuan" <?php echo e($data->jenis_kelamin=='laki-laki' ? 'selected' : ''); ?>>Perempuan</option>
+                            <option value="laki-laki" <?php echo e(($data->jenis_kelamin === 'laki-laki') ? 'Selected' : ''); ?>>Laki Laki</option>
+                            <option value="perempuan" <?php echo e(($data->jenis_kelamin === 'perempuan') ? 'Selected' : ''); ?>>Perempuan</option>
                         </select>
                         <?php if ($errors->has('jenis_kelamin')) :
 if (isset($message)) { $messageCache = $message; }

@@ -9,6 +9,7 @@
             <table class="table table-bordered text-center" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                     <th>No</th>
+                    <th>Tipe Padi</th>
                     <th>Jenis</th>
                     <th>Varietas</th>
                     <th>Action</th>
@@ -26,7 +27,7 @@
                         $thisID = $data->pascatanam[0]->id;
                     }elseif(count($data->tanam)!=0){
                         $routes = 'in.show';
-                        $thisID = $data->tanam[0]->id;                        
+                        $thisID = $data->tanam[0]->id;
                     }else{
                         $routes = 'error';
                     }
@@ -34,15 +35,16 @@
                     <?php if($routes != 'error'): ?>
                     <tr>
                         <td><?php echo e(($i+1)); ?></td>
+                        <td><?php echo e($data->tipe_padi); ?></td>
                         <td><?php echo e($data->jenis_padi); ?></td>
                         <td><?php echo e($data->varietas); ?></td>
                         <td>
                             <a class="btn btn-success" href="<?php echo e(route('p.i.'.$routes, ['id' => $thisID])); ?>">
                                 Detail
                             </a>
-                            <a class="btn btn-success" href="<?php echo e(route('p.i.'.$routes. '.edit', ['id' => $thisID])); ?>">
+                            <!-- <a class="btn btn-success" href="<?php echo e(route('p.i.'.$routes. '.edit', ['id' => $thisID])); ?>">
                                 Ubah
-                            </a>
+                            </a> -->
                         </td>
                     </tr>
                     <?php endif; ?>
@@ -51,7 +53,7 @@
             </table>
         </div>
     </div>
-</div>    
+</div>
 <?php $__env->stopSection(); ?>
 
 <?php echo $__env->make('base', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\ppl-agro-main\ppl-agro-main\resources\views/petani/padi/index.blade.php ENDPATH**/ ?>

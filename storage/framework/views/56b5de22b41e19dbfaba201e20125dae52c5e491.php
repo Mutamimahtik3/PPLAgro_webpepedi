@@ -8,7 +8,7 @@
     Konsultasi
     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 </a>
-<a class="nav-link collapsed" href="">
+<a class="nav-link collapsed" href="<?php echo e(route('p.artikel.index')); ?>">
     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
     Artikel
     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>

@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 <center>
-		<form action="<?php echo e(route('a.i.pr.update.jadwal', ['id' => $data->pratanam_id , 'idjadwal' => $data->id])); ?>" method="POST">
+		<form action="<?php echo e(route('k.i.pr.update.jadwal', ['id' => $data->pratanam_id , 'idjadwal' => $data->id])); ?>" method="POST">
 		<?php echo csrf_field(); ?>
 		<?php echo method_field('put'); ?>	
 			<div class="form-group">

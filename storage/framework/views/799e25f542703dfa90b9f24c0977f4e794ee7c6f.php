@@ -4,7 +4,8 @@
 	<table width="70%" class="table table-bordered table-stripped">
 		<thead>
 			<th>No</th>
-			<th>Nama</th>
+			<th>Jenis Padi</th>
+			<th>Tipe Padi</th>
 			<th>Varietas</th>
 			<th>lokasi</th>
 			<th>luas_lahan</th>
@@ -19,6 +20,7 @@
 			<tr>
 				<td><?php echo e(($index + 1)); ?></td>
 				<td><?php echo e($data->padi->jenis_padi); ?></td>
+				<td><?php echo e($data->padi->tipe_padi); ?></td>
 				<td><?php echo e($data->padi->varietas); ?></td>
 				<td><?php echo e($data->lokasi); ?></td>
 				<td><?php echo e($data->luas_lahan); ?></td>
@@ -27,7 +29,11 @@
 				<td><?php echo e($data->ph_tanah); ?></td>
 				<td><?php echo e($data->kondisi_tanaman); ?></td>
 				<td>
+					<?php if(Auth::user()->role=='konsultan'): ?>
+					<a href="<?php echo e(route('k.i.tn.show', ['id' => $data->id])); ?>">Detail</a>
+					<?php elseif(Auth::user()->role=='admin'): ?>
 					<a href="<?php echo e(route('a.i.tn.show', ['id' => $data->id])); ?>">Detail</a>
+					<?php endif; ?>
 				</td>
 			</tr>
 			<?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>

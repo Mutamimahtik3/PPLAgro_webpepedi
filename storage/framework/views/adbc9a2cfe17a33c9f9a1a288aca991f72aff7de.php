@@ -4,6 +4,30 @@
 	<?php echo csrf_field(); ?>
 	<?php echo method_field('put'); ?>
 		<div class="form-group">
+		<label class="small mb-1" for="padi">Status</label>
+		<select name="status" class="form-control">
+			<option value="<?php echo e(strtolower('Belum Terjadi')); ?>" <?php echo e($data->status=='belum terjadi' ? 'selected' : ''); ?>>
+				Belum Terjadi
+			</option>
+			<option value="<?php echo e(strtolower('Sudah Terjadi')); ?>" <?php echo e($data->status=='sudah terjadi' ? 'selected' : ''); ?>>
+				Sudah Terjadi
+			</option>
+			<option value="<?php echo e(strtolower('Catatan Salah')); ?>" <?php echo e($data->status=='catatan salah' ? 'selected' : ''); ?>>
+				Catatan Salah
+			</option>
+		</select>
+		<?php if ($errors->has('status')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('status'); ?>
+		<small class="text-danger">
+			<?php echo e(ucwords($message)); ?>
+
+		</small>
+		<?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif; ?>
+		</div>
+		<div class="form-group">
 			<label class="small mb-1" for="padi">Jenis Padi</label>
 		<input class="form-control py-4" id="padi" type="text" placeholder="Jenis Padi" name="jenis_padi" value="<?php echo e($data->padi->jenis_padi); ?>"/>
 		</div>

@@ -41,24 +41,24 @@ endif; ?>
                     <br>
 
                     <div class="form-group">
-                        <label class="small mb-1" for="jenis_kelamin">Jenis Kelamin</label>
-                        <select class="form-control py-4" id="jenis_kelamin" name="jenis_kelamin">
-                            <option value="laki-laki" <?php echo e($data->jenis_kelamin=='laki-laki' ? 'selected' : ''); ?>>Laki - laki</option>
-                            <option value="perempuan" <?php echo e($data->jenis_kelamin=='laki-laki' ? 'selected' : ''); ?>>Perempuan</option>
-                          </select>
-                    </div>
-                    <?php if ($errors->has('jenis_kelamin')) :
+                        <label for="exampleFormControlSelect1">Jenis Kelamin</label>
+                        <select class="form-control" id="exampleFormControlSelect1" name="jenis_kelamin">
+                            <option disabled selected>Pilih Jenis Kelamin</option>
+                            <option value="laki-laki">Laki Laki</option>
+                            <option value="perempuan">Perempuan</option>
+                        </select>
+                        <?php if ($errors->has('jenis_kelamin')) :
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('jenis_kelamin'); ?>
-                    <br>
-                    <span>
-                        <?php echo e(ucwords($message)); ?>
+                        <label class="small mb-1 text-danger">
+                            <?php echo e(ucwords($message)); ?>
 
-                    </span>
-                    <?php unset($message);
+                        </label>
+                        <?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
 endif; ?>
-                    <br>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="alamat">Alamat</label>
                     <textarea class="form-control" id="alamat" rows="3" name="alamat"><?php echo e($data->alamat); ?></textarea>
@@ -66,7 +66,7 @@ endif; ?>
                     <?php if ($errors->has('alamat')) :
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('alamat'); ?>
-                    <br>
+                    
                     <span>
                         <?php echo e(ucwords($message)); ?>
 
@@ -74,7 +74,7 @@ $message = $errors->first('alamat'); ?>
                     <?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
 endif; ?>
-                    <br>
+                    
                     <div class="form-group">
                         <label class="small mb-1" for="pekerjaan">Pekerjaan</label>
                         <input class="form-control py-4" id="pekerjaan" type="text" placeholder="Pekerjaan" name="pekerjaan" value="<?php echo e($data->pekerjaan); ?>"/>
@@ -83,7 +83,7 @@ endif; ?>
                     <?php if ($errors->has('pekerjaan')) :
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('pekerjaan'); ?>
-                    <br>
+                    
                     <span>
                         <?php echo e(ucwords($message)); ?>
 

@@ -18,21 +18,47 @@ $message = $errors->first('jenis_padi'); ?>
 if (isset($messageCache)) { $message = $messageCache; }
 endif; ?>
 		
+
 		<div class="form-group">
-			<label class="small mb-1" for="varietas">Varietas</label>
-		<input class="form-control py-4" id="varietas" type="text" placeholder="Varietas" name="varietas" value="<?php echo e(old('varietas')); ?>"/>
-		</div>
-		<?php if ($errors->has('varietas')) :
+			<label for="exampleFormControlSelect1">Varietas</label>
+			<select class="form-control" id="exampleFormControlSelect1" name="varietas">
+				<option disabled selected>Pilih Varietas</option>
+				<option value="hibrida">Hibrida</option>
+				<option value="unggul">Unggul</option>
+				<option value="padi lokal">Padi Lokal</option>
+			</select>
+			<?php if ($errors->has('varietas')) :
 if (isset($message)) { $messageCache = $message; }
 $message = $errors->first('varietas'); ?>
-		<small class="text-danger">
-			<?php echo e(ucwords($message)); ?>
+			<label class="small mb-1 text-danger">
+				<?php echo e(ucwords($message)); ?>
 
-		</small>
-		<?php unset($message);
+			</label>
+			<?php unset($message);
 if (isset($messageCache)) { $message = $messageCache; }
 endif; ?>
-		<br>
+		</div>
+
+		<div class="form-group">
+			<label for="tipe_padi">Tipe Padi</label>
+			<select class="form-control" id="tipe_padi" name="tipe_padi">
+				<option disabled selected>Pilih Tipe Padi</option>
+				<option value="padi wangi">Padi Wangi</option>
+				<option value="padi pera">Padi Pera</option>
+				<option value="padi pulen">Padi Pulen</option>			
+			</select>
+			<?php if ($errors->has('tipe_padi')) :
+if (isset($message)) { $messageCache = $message; }
+$message = $errors->first('tipe_padi'); ?>
+			<label class="small mb-1 text-danger">
+				<?php echo e(ucwords($message)); ?>
+
+			</label>
+			<?php unset($message);
+if (isset($messageCache)) { $message = $messageCache; }
+endif; ?>
+		</div>
+	
 		<button class="btn btn-primary" type="submit">Submit</button>
 	</form>
  <?php $__env->stopSection(); ?>

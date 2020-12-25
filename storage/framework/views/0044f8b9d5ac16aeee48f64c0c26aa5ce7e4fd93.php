@@ -27,4 +27,9 @@
     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
     Konsultasi
     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+</a>
+<a class="nav-link collapsed" href="<?php echo e(route('a.artikel.index')); ?>" target="">
+    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+    Artikel Dan Berita
+    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
 </a><?php /**PATH D:\ppl-agro-main\ppl-agro-main\resources\views/layouts/side-admin.blade.php ENDPATH**/ ?>

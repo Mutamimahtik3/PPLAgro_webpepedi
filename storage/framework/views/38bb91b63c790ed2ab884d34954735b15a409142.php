@@ -1,6 +1,6 @@
 <?php $__env->startSection('content'); ?>
 <center>
-		<form action="<?php echo e(route('a.i.ps.update', ['id' => $data->id])); ?>" method="POST">
+		<form action="<?php echo e(route('k.i.ps.update', ['id' => $data->id])); ?>" method="POST">
 		<?php echo csrf_field(); ?>
 		<?php echo method_field('put'); ?>	
 			<div class="form-group">

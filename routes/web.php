@@ -199,6 +199,12 @@ Route::group(['middleware' => ['auth', 'checkRole:konsultan']], function () {
 	});
 });
 Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
+	
+	// CATATAN
+	Route::put('/catatan/{id}','Petani\PadiController@catatan')->name('catatan');
+	// STATUS
+	Route::put('/status/{id}','Petani\PadiController@status')->name('status');
+
 	Route::prefix('petani')->name('p.')->group(function () {
 		Route::prefix('artikel')->name('artikel.')->group(function () {
 			Route::get('/','Admin\ArtikelController@index')
@@ -215,7 +221,7 @@ Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
 				->name('show');		
 			Route::post('/create','Petani\PadiController@store')
 				->name('store');
-			Route::put('/createProses/{jenis_padi}/{varietas}','Petani\PadiController@storeProses')
+			Route::put('/createProses/{jenis_padi}/{varietas}/{tipe_padi}','Petani\PadiController@storeProses')
 				->name('store.proses');
 		});		
 		Route::prefix('indikator')->name('i.')->group(function () {
@@ -249,12 +255,12 @@ Route::group(['middleware' => ['auth', 'checkRole:petani']], function () {
 				->name('in.update');
 
 
-			Route::put('/tanam/{varietas}/{jenis_padi}','Petani\IndikatorController@inikatorTanam')
-				->name('tanam');
-			Route::put('/pratanam/{varietas}/{jenis_padi}','Petani\IndikatorController@inikatorPrataman')
-				->name('pratanam');
-			Route::put('/pascatanam/{varietas}/{jenis_padi}','Petani\IndikatorController@inikatorPascatanam')
+			Route::put('/tanam/{varietas}/{jenis_padi}/{tipe_padi}','Petani\IndikatorController@inikatorTanam')->name('tanam');
+			Route::put('/pratanam/{varietas}/{jenis_padi}/{tipe_padi}','Petani\IndikatorController@inikatorPrataman')->name('pratanam');
+			Route::put('/pascatanam/{varietas}/{jenis_padi}/{tipe_padi}','Petani\IndikatorController@inikatorPascatanam')
 				->name('pascatanam');
+
+
 
 		});		
 	});	
